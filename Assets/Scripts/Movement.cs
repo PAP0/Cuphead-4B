@@ -7,7 +7,8 @@ public class Movement : MonoBehaviour
     #region Variables
 
     Rigidbody2D PlayerRb;
-    [SerializeField] [Range(6,10)] float speed;
+    //[SerializeField] [Range(6,10)] float speed;
+    [SerializeField] float speed;
     [SerializeField] float dash;
     [SerializeField] float jumpForce;
     bool isGrounded = false;
@@ -29,7 +30,7 @@ public class Movement : MonoBehaviour
         Move();
         Jump();
         CheckIfGrounded();
-        Dash();
+        //Dash();
     }
 
     void Move()
