@@ -36,6 +36,8 @@ public class Movement : MonoBehaviour
         if (Input.GetKey("c"))
         {
             Debug.Log("C pressed");
+            Crouch();
+            CheckIfGrounded();
         }
         else
         {
