@@ -74,14 +74,14 @@ public class Movement : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float moveBy = x * speed;
         PlayerRb.velocity = new Vector2(moveBy, PlayerRb.velocity.y);
-        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if(isGrounded == true)
             {
                 anim.SetBool("isWalking", true);
             }
         }
-        if(Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+        if(Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
             anim.SetBool("isWalking", false);
         }
@@ -89,11 +89,11 @@ public class Movement : MonoBehaviour
 
     void Crouch()
     {
-        if(Input.GetKeyDown(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.DownArrow))
         {
                 anim.SetBool("isCrouching", true);
         }
-        if (Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.DownArrow))
         {
                 anim.SetBool("isCrouching", false);
         }
@@ -114,7 +114,7 @@ public class Movement : MonoBehaviour
 
     void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if(Input.GetKeyDown(KeyCode.Z) && isGrounded)
         {
             PlayerRb.velocity = new Vector2(PlayerRb.velocity.x, jumpForce);
         }
