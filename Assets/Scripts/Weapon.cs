@@ -19,6 +19,19 @@ public class Weapon : MonoBehaviour
                 Shoot();
             }
         }
+
+
+        
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            firePoint.transform.localPosition = new Vector3 (2.38f, -1.37f, 0f);
+        }
+        else if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            firePoint.transform.localPosition = new Vector3(2.38f, -0.63f, 0f);
+        }
+
     }
 
     void Shoot()
