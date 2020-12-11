@@ -33,6 +33,12 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey("c"))
+        {
+            Debug.Log("C pressed");
+        }
+        else
+        {
         currentspeed = Input.GetAxisRaw("Horizontal") * speed;
         Move();
         Jump();
@@ -40,7 +46,9 @@ public class Movement : MonoBehaviour
         Crouch();
         anim.SetFloat("Speed", Mathf.Abs(currentspeed));
         Debug.Log(currentspeed);
-        //Dash();
+        //Dash();  
+        }
+  
     }
 
     void FixedUpdate()

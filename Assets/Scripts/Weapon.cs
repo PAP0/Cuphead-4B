@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetKey("x"))
         {
             if (Time.time - lastFired > 1 / fireRate)
             {
