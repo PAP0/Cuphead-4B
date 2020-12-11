@@ -82,19 +82,11 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.S))
         {
-            if (isGrounded == true)
-            {
-                speed = 0;
                 anim.SetBool("isCrouching", true);
-            }
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
-            if (isGrounded == false)
-            {
-                speed = 13;
                 anim.SetBool("isCrouching", false);
-            }
         }
     }
 
