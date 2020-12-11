@@ -6,12 +6,18 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public float fireRate;
+    private float lastFired;
 
     void Update()
-    { 
-        if(Input.GetButtonDown("Fire1"))
+    {
+        if (Input.GetButton("Fire1"))
         {
-            Shoot();
+            if (Time.time - lastFired > 1 / fireRate)
+            {
+                lastFired = Time.time;
+                Shoot();
+            }
         }
     }
 
