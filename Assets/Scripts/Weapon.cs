@@ -20,8 +20,31 @@ public class Weapon : MonoBehaviour
             }
         }
 
+        if(GameObject.Find("Player").GetComponent<Movement>().facingRight == false)
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                firePoint.transform.localPosition = new Vector3(0f, 2.70f, 0f);
+                firePoint.transform.Rotate(0f, 0f, 180f, 0f);
+            }
+            else if (Input.GetKeyUp(KeyCode.UpArrow))
+            {
+                firePoint.transform.localPosition = new Vector3(2.38f, -0.63f, 0f);
+                firePoint.transform.Rotate(0f, 0f, -180f, 0f);
+            }
+        }
+      
 
-        
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            firePoint.transform.localPosition = new Vector3(0f, 2.70f, 0f);
+            firePoint.transform.Rotate(0f, 0f, 90f, 0f);
+        }
+        else if(Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            firePoint.transform.localPosition = new Vector3(2.38f, -0.63f, 0f);
+            firePoint.transform.Rotate(0f, 0f, -90f, 0f);
+        }
 
         if (Input.GetKey(KeyCode.DownArrow))
         {
@@ -31,7 +54,6 @@ public class Weapon : MonoBehaviour
         {
             firePoint.transform.localPosition = new Vector3(2.38f, -0.63f, 0f);
         }
-
     }
 
     void Shoot()

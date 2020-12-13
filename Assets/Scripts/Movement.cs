@@ -47,7 +47,7 @@ public class Movement : MonoBehaviour
         CheckIfGrounded();
         Crouch();
         anim.SetFloat("Speed", Mathf.Abs(currentspeed));
-        Debug.Log(currentspeed);
+        //Debug.Log(currentspeed);
         //Dash();  
         }
   
