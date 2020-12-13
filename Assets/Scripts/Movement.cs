@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     Rigidbody2D PlayerRb;
     //[SerializeField] [Range(6,10)] float speed;
     [SerializeField] float speed;
-    [SerializeField] float currentspeed;
+    [SerializeField]  public float currentspeed;
     [SerializeField] float dash;
     [SerializeField] float jumpForce;
     public float horizontal;
