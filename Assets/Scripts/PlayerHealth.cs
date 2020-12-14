@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] UpdateUI UIScript;
     [SerializeField] int health;
+    [SerializeField] Movement movement;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= damageAmount;
         Updateui();
+        movement.GettingHit();
     }
     private void Updateui()
     {

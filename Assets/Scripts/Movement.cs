@@ -130,12 +130,18 @@ public class Movement : MonoBehaviour
             anim.SetBool("isJumping", false);
         }
     }
+    public void GettingHit()
+    {
+        anim.Play("GettingHit");
+        
+    }
 
     void CheckIfGrounded()
     {
         Collider2D collider = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer);
         isGrounded = collider != null ? true : false;
     }
+    
 
     #endregion
 
