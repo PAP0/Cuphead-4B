@@ -949,7 +949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIScript: {fileID: 1774310902}
-  health: 5
+  health: 3
 --- !u!1 &2087768476 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3039627129963307295, guid: 5a2359a3df64b9e43a4b7481523abcb9, type: 3}
