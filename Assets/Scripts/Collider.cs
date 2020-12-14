@@ -24,13 +24,13 @@ public class Collider : MonoBehaviour
 
     void Crouching()
     {
-        if(Input.GetKeyDown(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.DownArrow))
         {
             Idlecoll.enabled = false;
             Crouchcoll.enabled = true;
             Walkcoll.enabled = false;
         }
-        if(Input.GetKeyUp(KeyCode.S))
+        if(Input.GetKeyUp(KeyCode.DownArrow))
         {
             Idlecoll.enabled = true;
             Crouchcoll.enabled = false;
@@ -40,13 +40,13 @@ public class Collider : MonoBehaviour
 
     void Walking()
     {
-        if(Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             Idlecoll.enabled = false;
             Crouchcoll.enabled = false;
             Walkcoll.enabled = true;
         }
-        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
             Idlecoll.enabled = true;
             Crouchcoll.enabled = false;
