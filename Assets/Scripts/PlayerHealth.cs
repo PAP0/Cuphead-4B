@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void Damage(int damageAmount)
+    public void Damage(int damageAmount)
     {
         health -= damageAmount;
         Updateui();
