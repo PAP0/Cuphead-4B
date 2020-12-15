@@ -1,0 +1,69 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbool 10000",
+	"frame": {"x":0,"y":0,"w":17,"h":20},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":14,"w":33,"h":44},
+	"sourceSize": {"w":33,"h":44}
+}
+,{
+	"filename": "Symbool 10001",
+	"frame": {"x":17,"y":0,"w":23,"h":24},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":12,"w":33,"h":44},
+	"sourceSize": {"w":33,"h":44}
+}
+,{
+	"filename": "Symbool 10002",
+	"frame": {"x":40,"y":0,"w":24,"h":28},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":6,"y":9,"w":33,"h":44},
+	"sourceSize": {"w":33,"h":44}
+}
+,{
+	"filename": "Symbool 10003",
+	"frame": {"x":64,"y":0,"w":28,"h":30},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":8,"w":33,"h":44},
+	"sourceSize": {"w":33,"h":44}
+}
+,{
+	"filename": "Symbool 10004",
+	"frame": {"x":92,"y":0,"w":33,"h":36},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":6,"w":33,"h":44},
+	"sourceSize": {"w":33,"h":44}
+}
+,{
+	"filename": "Symbool 10005",
+	"frame": {"x":0,"y":36,"w":33,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":44},
+	"sourceSize": {"w":33,"h":44}
+}
+,{
+	"filename": "Symbool 10006",
+	"frame": {"x":33,"y":36,"w":32,"h":40},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":2,"w":33,"h":44},
+	"sourceSize": {"w":33,"h":44}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "19.2.0.405",
+	"Target": "Edge Animate",
+	"Target Version": "4.0",
+	"image": "Naamloos-1.png",
+	"format": "RGBA8888",
+	"size": {"w":128,"h":128},
+	"scale": "1"
+}
+}
