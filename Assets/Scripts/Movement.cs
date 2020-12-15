@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float checkGroundRadius;
     [SerializeField] LayerMask groundLayer;
     public bool facingRight = true;
+    bool isCrouching;
     Animator anim;
 
     #endregion
@@ -91,13 +92,17 @@ public class Movement : MonoBehaviour
 
     void Crouch()
     {
-        if(Input.GetKeyDown(KeyCode.DownArrow))
+        if(Input.GetKeyDown(KeyCode.DownArrow) && isGrounded == true)
         {
                 anim.SetBool("isCrouching", true);
+            speed = 0;
+            //isCrouching = true;
         }
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
                 anim.SetBool("isCrouching", false);
+            speed = 13;
+            //isCrouching = false;
         }
     }
 
