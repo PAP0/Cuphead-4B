@@ -8,17 +8,23 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public float fireRate;
     private float lastFired;
+    bool isShooting;
     
 
     void Update()
     {
         if (Input.GetKey("x"))                                                                                                                           //Shooting input
         {
+            isShooting = true;
             if (Time.time - lastFired > 1 / fireRate)                                                                                                    //Infinite fire 
             {
                 lastFired = Time.time;
                 Shoot();
             }
+        }
+        else
+        {
+            isShooting = false;
         }
 
         if(Input.GetKey(KeyCode.DownArrow))                                                                                                              //Input Aiming system
@@ -42,6 +48,7 @@ public class Weapon : MonoBehaviour
             ResetRotation();
             ResetPosition();
         }
+        Debug.Log(isShooting);
     }
 
     void Shoot()
