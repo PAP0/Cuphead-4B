@@ -5,13 +5,31 @@ using UnityEngine.UI;
 
 public class UpdateUI : MonoBehaviour
 {
-    [SerializeField] Text hptext;
+    [SerializeField] GameObject HP1;
+    [SerializeField] GameObject HP2;
+    [SerializeField] GameObject HP3;
     void Start()
     {
-        hptext = GetComponentInParent<Text>();
+        
     }
     public void ChangeUI(int currentHealth)
     {
-        hptext.text = "HP: " + currentHealth;
+        if(currentHealth == 3){
+            HP3.SetActive(true);
+            HP2.SetActive(false);
+            HP1.SetActive(false);
+        } else if(currentHealth == 2){
+            HP2.SetActive(true);
+            HP1.SetActive(false);
+            HP3.SetActive(false);
+        }else if(currentHealth == 1){
+            HP1.SetActive(true);
+            HP2.SetActive(false);
+            HP3.SetActive(false);
+        }else{
+            HP1.SetActive(false);
+            HP2.SetActive(false);
+            HP3.SetActive(false);
+        }
     }
 }
