@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class CoinPickup : MonoBehaviour
 {
-    
-    // Start is called before the first frame update
-    
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if(col.tag == "Player")
@@ -16,6 +14,7 @@ public class CoinPickup : MonoBehaviour
         }
         
     }
+    
     
 
 }
