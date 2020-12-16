@@ -7,7 +7,7 @@ public class ShootingAnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.Find("Player").GetComponent<Weapon>().isShooting = true)
+        if(GameObject.Find("Player").GetComponent<Weapon>().isShooting == true)
         {
             if (Input.GetKey(KeyCode.DownArrow))                                                                                                              
             {

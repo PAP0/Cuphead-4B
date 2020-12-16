@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public float fireRate;
     private float lastFired;
-    bool isShooting;
+    public bool isShooting;
     
 
     void Update()
