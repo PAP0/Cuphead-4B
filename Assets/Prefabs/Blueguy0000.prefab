@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4861193302937286548}
   - component: {fileID: 4861193302937286549}
   - component: {fileID: 4861193302937286550}
+  - component: {fileID: -2646586595643310137}
   m_Layer: 0
   m_Name: Blueguy0000
   m_TagString: Untagged
@@ -158,6 +159,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-2646586595643310137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4861193302937286544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0d351f63ae8bb4184ccf1f5da7a202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
 --- !u!1 &4861193303829735243
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] private int health;
     // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.tag == "Bullet"){
+           if(health <= 1){
+            Destroy(this.gameObject);
+            }else{
+           takeDamage(); 
+            } 
+        }
+        
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void takeDamage(){
+        health -= 1;
     }
 }
