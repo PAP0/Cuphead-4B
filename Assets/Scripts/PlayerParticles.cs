@@ -18,7 +18,6 @@ public class PlayerParticles : MonoBehaviour
     {
         Timer -= Time.deltaTime;
         SprintParticle();
-        Debug.Log(Timer);
         if(Timer < 0)
         {
             Timer = partTime;
