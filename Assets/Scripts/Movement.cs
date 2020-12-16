@@ -8,7 +8,6 @@ public class Movement : MonoBehaviour
 
     [SerializeField] GameObject Player;
     Rigidbody2D PlayerRb;
-    //[SerializeField] [Range(6,10)] float speed;
     [SerializeField] float speed;
     [SerializeField]  public float currentspeed;
     [SerializeField] float dash;
@@ -94,19 +93,19 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.DownArrow) && isGrounded == true)
         {
-                anim.SetBool("isCrouching", true);
+            anim.SetBool("isCrouching", true);
             speed = 0;
-            //isCrouching = true;
+            isCrouching = true;
         }
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-                anim.SetBool("isCrouching", false);
+            anim.SetBool("isCrouching", false);
             speed = 13;
-            //isCrouching = false;
+            isCrouching = false;
         }
     }
 
-    void Dash()
+    void Dash()//not used
     {
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -118,12 +117,12 @@ public class Movement : MonoBehaviour
             PlayerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
     }
-
     void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.Z) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Z) && isGrounded && isCrouching == false)
         {
-            PlayerRb.velocity = new Vector2(PlayerRb.velocity.x, jumpForce);
+            PlayerRb.velocity = Vector2.up * jumpForce;
+            //PlayerRb.velocity = new Vector2(PlayerRb.velocity.x, jumpForce);
         }
         if(isGrounded == false)
         {

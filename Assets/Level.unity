@@ -589,9 +589,8 @@ Transform:
   - {fileID: 1803232560}
   - {fileID: 2056473675}
   - {fileID: 1465575581}
-  - {fileID: 2093911237}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390454850
 GameObject:
@@ -3481,7 +3480,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 14.969952
+  orthographic size: 11.62522
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3505,7 +3504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528360111}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.8, z: -29.5}
+  m_LocalPosition: {x: -5.31, y: 3.93, z: -29.5}
   m_LocalScale: {x: 1.0382999, y: 1.0383, z: 1.0382999}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3692,7 +3691,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -10.34745, y: 3.0379324}
+  - {x: -10.53808, y: 2.2118666}
+  - {x: -8.353483, y: 3.1322658}
   - {x: -0.74794006, y: 3.0318475}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
@@ -5512,12 +5512,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093911228}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.23, y: 3.89, z: -11.799999}
+  m_LocalPosition: {x: -7.4, y: -1.13, z: -11.799999}
   m_LocalScale: {x: 0.87410015, y: 0.87410015, z: 0.87410015}
   m_Children:
   - {fileID: 2116246428}
-  m_Father: {fileID: 347809340}
-  m_RootOrder: 6
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2116246427
 GameObject:
@@ -5531,7 +5531,7 @@ GameObject:
   m_Layer: 9
   m_Name: GroundChecker
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
