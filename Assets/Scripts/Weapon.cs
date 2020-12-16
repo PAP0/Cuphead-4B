@@ -83,6 +83,5 @@ public class Weapon : MonoBehaviour
         {
             firePoint.transform.rotation = Quaternion.Euler(0f, 0f, 135f);
         }
-        
     }
 }

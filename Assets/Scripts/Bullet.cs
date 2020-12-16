@@ -13,7 +13,15 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.right * speed;
     }
 
-    
+    void Update()
+    {
+        if (!GetComponent<Renderer>().isVisible)
+        {
+            Destroy(gameObject);
+        }
+    }   
+
+
     void OnTriggerEnter2D (Collider2D hitInfo)
     {
         Destroy(gameObject);
