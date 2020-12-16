@@ -5,7 +5,7 @@ using UnityEngine;
 public class VSync : MonoBehaviour
 {
 
-    public int target = 60;
+    public int target = 120;
 
     void Awake()
     {

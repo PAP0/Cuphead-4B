@@ -17,8 +17,11 @@ public class Movement : MonoBehaviour
     [SerializeField] Transform isGroundedChecker;
     [SerializeField] float checkGroundRadius;
     [SerializeField] LayerMask groundLayer;
+    public float jumpTimeCounter;
+    public float jumpTime;
     public bool facingRight = true;
     bool isCrouching;
+    private bool isJumping;
     Animator anim;
 
     #endregion
@@ -121,8 +124,23 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && isGrounded && isCrouching == false)
         {
-            PlayerRb.velocity = Vector2.up * jumpForce;
-            //PlayerRb.velocity = new Vector2(PlayerRb.velocity.x, jumpForce);
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
+            //PlayerRb.velocity = Vector2.up * jumpForce;
+            PlayerRb.velocity = new Vector2(PlayerRb.velocity.x, jumpForce);
+        }
+
+        if (Input.GetKey(KeyCode.Z) && isJumping == true && isGrounded == false)
+        {
+            if(jumpTimeCounter > 0)
+            {
+                PlayerRb.velocity = new Vector2(PlayerRb.velocity.x, jumpForce);
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
         }
         if(isGrounded == false)
         {
@@ -145,8 +163,7 @@ public class Movement : MonoBehaviour
         Collider2D collider = Physics2D.OverlapCircle(isGroundedChecker.position, checkGroundRadius, groundLayer);
         isGrounded = collider != null ? true : false;
     }
-    
+   
 
     #endregion
-
 }
