@@ -12,16 +12,16 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey("x"))
+        if (Input.GetKey("x"))                                                                                                                           //Shooting input
         {
-            if (Time.time - lastFired > 1 / fireRate)
+            if (Time.time - lastFired > 1 / fireRate)                                                                                                    //Infinite fire 
             {
                 lastFired = Time.time;
                 Shoot();
             }
         }
 
-        if(Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetKey(KeyCode.DownArrow))                                                                                                              //Input Aiming system
         {
             firePoint.transform.localPosition = new Vector3(2.38f, -1.37f, 0f);
         }
@@ -46,15 +46,15 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);     
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);                                                                               // Creates Bullet
     }
 
     void ResetPosition()
     {
-        firePoint.transform.localPosition = new Vector3(2.38f, -0.63f, 0f);
+        firePoint.transform.localPosition = new Vector3(2.38f, -0.63f, 0f);                                                                             // Resets Position of firePoint
     }
 
-    void ResetRotation()
+    void ResetRotation()                                                                                                                                // Resets Rotation of firePoint
     {        
         if(GameObject.Find("Player").GetComponent<Movement>().facingRight == true)
         {
@@ -66,13 +66,13 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    void AimUp()
+    void AimUp()                                                                                                                                        //Moves and rotates firePoint to fire Upwards
     {
         firePoint.transform.localPosition = new Vector3(0f, 2.70f, 0f);
         firePoint.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
     }
 
-    void AimAngled()
+    void AimAngled()                                                                                                                                    //Moves and rotates firePoint to fire Angled
     {
         firePoint.transform.localPosition = new Vector3(2.38f, 2.15f, 0f);
         if (GameObject.Find("Player").GetComponent<Movement>().facingRight == true)
