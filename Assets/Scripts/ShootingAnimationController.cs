@@ -4,31 +4,16 @@ using UnityEngine;
 
 public class ShootingAnimationController : MonoBehaviour
 {
-    // Update is called once per frame
+    public Animator animator;
     void Update()
     {
         if(GameObject.Find("Player").GetComponent<Weapon>().isShooting == true)
         {
-            if (Input.GetKey(KeyCode.DownArrow))                                                                                                              
-            {
-                //crouch shooting
-            }
-            else if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
-            {
-                //Angle
-            }
-            else if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
-            {
-                //Angle
-            }
-            else if (Input.GetKey(KeyCode.UpArrow))
-            {
-                //Up
-            }
-            else
-            {
-                //Neutral
-            }
+            animator.SetBool("IsShooting", true);
+        }
+        else if(GameObject.Find("Player").GetComponent<Weapon>().isShooting == false)
+        {
+            animator.SetBool("IsShooting", false);
         }
     }
 }
