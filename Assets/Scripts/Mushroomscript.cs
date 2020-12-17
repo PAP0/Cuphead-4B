@@ -11,13 +11,20 @@ public class Mushroomscript : MonoBehaviour
         MushroomAnim = GetComponent<Animator>();
     }
 
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        MushroomAnim.SetBool("isShooting", true);
+        MushroomAnim.SetBool("isGettingUp", false);
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag.Equals("Player"))
         {
+            MushroomAnim.Play("GetUp");
             MushroomAnim.SetBool("isGettingUp", true);
+            MushroomAnim.SetBool("isShooting", false);
             MushroomAnim.SetBool("isGoingDown", false);
-
         }
     }
     void OnTriggerExit2D(Collider2D col)
@@ -26,6 +33,7 @@ public class Mushroomscript : MonoBehaviour
         {
             MushroomAnim.SetBool("isGettingUp", false);
             MushroomAnim.SetBool("isGoingDown", true);
+            MushroomAnim.SetBool("isShooting", false);
         }
     }
 }

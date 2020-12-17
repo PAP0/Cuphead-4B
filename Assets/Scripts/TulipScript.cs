@@ -10,6 +10,7 @@ public class TulipScript : MonoBehaviour
     {
         Tulli = GetComponent<Animator>();
     }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag.Equals("Player"))
