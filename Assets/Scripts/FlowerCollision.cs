@@ -11,8 +11,7 @@ public class FlowerCollision : MonoBehaviour
     {
         if(col.tag == "Player")
         {
-            Debug.Log("Test");
-            ph.Damage(2);
+            ph.Damage(1);
         }
         
     }
