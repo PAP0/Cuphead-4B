@@ -126,7 +126,6 @@ public class Movement : MonoBehaviour
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
-            //PlayerRb.velocity = Vector2.up * jumpForce;
             PlayerRb.velocity = new Vector2(PlayerRb.velocity.x, jumpForce);
         }
 
